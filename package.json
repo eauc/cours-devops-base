@@ -1,15 +1,19 @@
 {
-  "name": "test-ci",
+  "name": "cours-devops",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "4.16.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "4.0.1",
+    "supertest": "3.0.0"
+  },
   "scripts": {
+    "start": "node index.js",
     "test": "mocha"
   },
-  "author": "",
+  "author": "Auclair E.",
   "license": "ISC"
 }
