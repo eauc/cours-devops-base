@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-11-17 Fri 16:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="auclair emmanuel" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<style>pre.src { color: white; background-color: #333 }</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb05db1e">1. TD Devops</a>
+<ul>
+<li><a href="#org10e9d20">1.1. Projet de demarrage</a>
+<ul>
+<li><a href="#orgb2c2d3b">1.1.1. Forker/cloner le repository Git de base</a></li>
+<li><a href="#org7937a05">1.1.2. Rappels quelques commandes Git</a></li>
+</ul>
+</li>
+<li><a href="#org73ad10d">1.2. Docker sur le poste de developpement</a>
+<ul>
+<li><a href="#orgb9b5f16">1.2.1. Installer Docker CE</a></li>
+<li><a href="#org04a2385">1.2.2. Docker worklflow</a></li>
+<li><a href="#org55d703d">1.2.3. Image node de base</a></li>
+<li><a href="#org2c0bb1a">1.2.4. Image de developpement</a></li>
+<li><a href="#org7b27486">1.2.5. Setup de developpement</a></li>
+<li><a href="#orgbc38de5">1.2.6. Tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb05db1e" class="outline-2">
+<h2 id="orgb05db1e"><span class="section-number-2">1</span> TD Devops</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-org10e9d20" class="outline-3">
+<h3 id="org10e9d20"><span class="section-number-3">1.1</span> Projet de demarrage</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><div id="outline-container-orgb2c2d3b" class="outline-4">
+<h4 id="orgb2c2d3b"><span class="section-number-4">1.1.1</span> Forker/cloner le repository Git de base</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+<a href="http://213.32.33.138:4242/">- Url du gitlab du cours</a>
+</p>
+<ul class="org-ul">
+<li>login: <code>group[N]</code></li>
+<li>password: <code>group[N]pass</code></li>
+</ul>
+<p>
+(vous pouvez changez le mdp de votre groupe dans les settings Gitlab si vous voulez).
+</p>
+
+
+<ul class="org-ul">
+<li>se rendre sur le projet Administrator/cours-devops-base.</li>
+<li>clicker sur le bouton "Fork" pour copier le projet dans votre groupe de travail gitlab.</li>
+<li>cloner votre projet Group[N]/cours-devops-base sur votre machine de dev.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-sh">git clone &lt;url du projet&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7937a05" class="outline-4">
+<h4 id="org7937a05"><span class="section-number-4">1.1.2</span> Rappels quelques commandes Git</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+Dans le repertoire du projet
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git status <span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">voir les modifications locales des fichiers du projet</span>
+git commit -a <span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">creer un nouveau commit avec toutes les modification locales</span>
+git push origin &lt;branch&gt; <span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">pousser les nouveaux commits crees localement sur le repository gitlab</span>
+git pull <span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">recuperer les nouveaux commits sur le serveur gitlab</span>
+git &lt;cmd&gt; --help <span style="color: #7f7f7f;"># </span><span style="color: #7f7f7f;">aide pour n'importe quelle commande git</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org73ad10d" class="outline-3">
+<h3 id="org73ad10d"><span class="section-number-3">1.2</span> Docker sur le poste de developpement</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-orgb9b5f16" class="outline-4">
+<h4 id="orgb9b5f16"><span class="section-number-4">1.2.1</span> Installer Docker CE</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Exemple sur une VM Debian:
+<a href="https://docs.docker.com/engine/installation/linux/docker-ce/debian/">Doc officielle</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org04a2385" class="outline-4">
+<h4 id="org04a2385"><span class="section-number-4">1.2.2</span> Docker worklflow</h4>
+<div class="outline-text-4" id="text-1-2-2">
+
+<div class="figure">
+<p><img src="./doc/docker_flow.png" alt="docker_flow.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./doc/docker_project.png" alt="docker_project.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org55d703d" class="outline-4">
+<h4 id="org55d703d"><span class="section-number-4">1.2.3</span> Image node de base</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li>aller sur le <a href="https://hub.docker.com/">Docker Hub</a>.</li>
+<li>trouver l'image officielle Node.</li>
+<li>creer un fichier Dockerfile dans le projet, basé sur l'image officielle node pour la version specifiee dans les tests.</li>
+<li>executer un shell node dans un container basé sur cette image.</li>
+<li>verifier que la version de Node est bien celle desiree.</li>
+</ul>
+
+<p>
+Directives Dockerfile:
+</p>
+<dl class="org-dl">
+<dt><code>FROM &lt;image:version&gt;</code></dt><dd>base l'image construite sur une autre image Docker.</dd>
+</dl>
+
+<p>
+Commandes docker:
+</p>
+<dl class="org-dl">
+<dt><code>docker build &lt;dir&gt;</code></dt><dd>construit une image docker a partir du Dockerfile situe dans un repertoire.
+<dl class="org-dl">
+<dt>l'option <code>-t</code></dt><dd>permet d'affecter un tag (nom) a l'image.</dd>
+</dl></dd>
+<dt><code>docker images</code></dt><dd>liste les images presentes sur le docker local.</dd>
+<dt><code>docker rmi &lt;image&gt;</code></dt><dd>efface une image docker.</dd>
+<dt><code>docker run &lt;image&gt;</code></dt><dd>cree et demarre un container base sur une image docker.
+<dl class="org-dl">
+<dt>l'option <code>-i</code></dt><dd>(interactive) garde le stdin du container ouvert et le connecte au stdin du terminal.</dd>
+<dt>l'option <code>-t</code></dt><dd>(tty) le stdin se comporte comme un terminal TTY.</dd>
+<dt>l'option <code>--name &lt;name&gt;</code></dt><dd>nomme le container (plus pratique pour l'arreter, etc).</dd>
+<dt>l'option <code>--rm</code></dt><dd>efface le container lorsque son execution se termine.</dd>
+<dt>l'option <code>-d</code></dt><dd>(daemon) detache le container du terminal.</dd>
+</dl></dd>
+<dt><code>docker ps</code></dt><dd>liste les containers presents sur la plateforme docker locale.
+<dl class="org-dl">
+<dt>l'option <code>-a</code></dt><dd>liste les containers ayant termine leur execution.</dd>
+</dl></dd>
+<dt><code>docker start &lt;container&gt;</code></dt><dd>demarre un container precedemment cree par <code>docker run</code>.</dd>
+<dt><code>docker stop &lt;container&gt;</code></dt><dd>arrete un container.</dd>
+<dt><code>docker rm &lt;container&gt;</code></dt><dd>efface un container.</dd>
+</dl>
+
+<p>
+Commande Node:
+</p>
+<dl class="org-dl">
+<dt><code>process.version</code></dt><dd>affiche la version courante de node.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org2c0bb1a" class="outline-4">
+<h4 id="org2c0bb1a"><span class="section-number-4">1.2.4</span> Image de developpement</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<ul class="org-ul">
+<li>inclure les sources du serveur dans l'image du projet.</li>
+<li>executer un shell bash dans un container base sur l'image pour verifier que les sources sont bien incluses dans l'image.</li>
+<li>installer les dependances node dans l'image du projet.</li>
+<li>executer un shell bash dans un container base sur l'image pour verifier que les dependances sont bien incluses dans l'image.</li>
+<li>demarrer le serveur node automatiquement au lancement du container.</li>
+<li>lancer le container (sans surcharger la commande de demarrage, et en publiant le port 3000 sur localhost) pour verifier que le serveur est bien demarre.</li>
+<li>charger <a href="http://localhost:3000">http://localhost:3000</a> dans un navigateur (ou CURL) pour verifier que le serveur repond correctement.
+<ul class="org-ul">
+<li>verifier les autres routes du serveur (<code>/quotes/n/1</code>, <code>/quotes/random</code>).</li>
+</ul></li>
+</ul>
+
+<p>
+Directives Dockerfile:
+</p>
+<dl class="org-dl">
+<dt><code>COPY &lt;src&gt; &lt;dst&gt;</code></dt><dd>copie tout le contenu du repertoire &lt;src&gt; de la machine hote (relatif au Dockerfile), dans le repertoire &lt;dst&gt; du file system de l'image docker.</dd>
+<dt><code>WORKDIR &lt;dir&gt;</code></dt><dd>change le repertoire courant dans le file system de l'image docker (~ <code>cd &lt;dir&gt;</code>).
+<ul class="org-ul">
+<li>affecte les directives suivantes du Dockerfile.</li>
+<li>les commandes executees dans les containers seront egalement lancees depuis ce repertoire.</li>
+</ul></dd>
+<dt><code>RUN &lt;cmd arg...&gt;</code></dt><dd>execute une commande, durant la construction de l'image, dans le file system de l'image.</dd>
+<dt><code>CMD ["&lt;cmd&gt;", "&lt;arg1&gt;", "&lt;arg2&gt;", ...]</code></dt><dd>definit la commande par defaut executee au lancement d'un container.
+<ul class="org-ul">
+<li>eg. <code>CMD ["echo", "toto"]</code> - il faut passer un tableau de Strings separees par des virgules !</li>
+</ul></dd>
+</dl>
+
+<p>
+Commande docker:
+</p>
+<dl class="org-dl">
+<dt><code>docker run &lt;image&gt; &lt;cmd&gt;</code></dt><dd>execute un container base sur &lt;image&gt;, en remplacement la commande par defaut par &lt;cmd&gt;.
+<dl class="org-dl">
+<dt>l'option <code>-p &lt;port-container&gt;:&lt;port-hote&gt;</code></dt><dd>permet de publier un port TCP du container sur la machine hote.</dd>
+</dl></dd>
+</dl>
+
+<p>
+Commandes node:
+</p>
+<dl class="org-dl">
+<dt><code>npm install</code></dt><dd>installe les dependances node decrites dans le <code>package.json</code> du projet.
+<ul class="org-ul">
+<li>les dependances sont installees dans le repertoire <code>node_modules</code> a la racine du projet.</li>
+</ul></dd>
+<dt><code>npm start</code></dt><dd>demarre le serveur node.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org7b27486" class="outline-4">
+<h4 id="org7b27486"><span class="section-number-4">1.2.5</span> Setup de developpement</h4>
+<div class="outline-text-4" id="text-1-2-5">
+<ul class="org-ul">
+<li>ajouter <code>nodemon</code> au dependances de developpement du projet.
+<ul class="org-ul">
+<li>la commande <code>nodemon</code> permet de relancer le serveur node lorsqu'un de ses fichiers source change.</li>
+</ul></li>
+<li>reconstruire l'image.</li>
+<li>executer un container de developpement, en montant le repertoire du projet sur la machine hote comme un volume dans le container, de sorte que les sources en cours d'edition soient visibles dans le container.</li>
+<li>lancer le serveur dans le container avec nodemon.</li>
+<li>verifier que lorsqu'un fichier source est modifie, le serveur redemarre dans le container.</li>
+</ul>
+
+<p>
+Commandes docker:
+</p>
+<dl class="org-dl">
+<dt><code>docker run &lt;image&gt; &lt;cmd&gt;</code></dt><dd><dl class="org-dl">
+<dt>l'option <code>-v &lt;repertoire-hote&gt;:&lt;repertoire-container&gt;</code></dt><dd>permet de "monter" un repertoire de la machine hote a la place d'un repertoire dans le container. Le container peut ainsi "voir" le contenu d'un repertoire de la machine hote.</dd>
+</dl></dd>
+</dl>
+
+<p>
+Commandes node:
+</p>
+<dl class="org-dl">
+<dt><code>npm install --save-dev &lt;package&gt;</code></dt><dd>installe une dependance de developpement et la rajoute au <code>package.json</code> du projet.</dd>
+<dt><code>./node_modules/.bin/nodemon .</code></dt><dd>execute le serveur node du projet, le redemarre si une source est modifiee.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgbc38de5" class="outline-4">
+<h4 id="orgbc38de5"><span class="section-number-4">1.2.6</span> Tests</h4>
+<div class="outline-text-4" id="text-1-2-6">
+<ul class="org-ul">
+<li>executer les tests unitaires du projet dans un nouveau container.</li>
+<li>lancer un container de developpement (cf. point precedent) et verifier qu'on peut lancer les tests sur les sources en cours de developpement.</li>
+</ul>
+
+<p>
+Commandes node:
+</p>
+<dl class="org-dl">
+<dt><code>npm run test</code></dt><dd>execute les tests unitaires du projet.</dd>
+<dt><code>npm run test -- -w</code></dt><dd>(watch) re-lance les tests a chaque changement des sources.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: auclair emmanuel</p>
+<p class="date">Created: 2017-11-17 Fri 16:34</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
